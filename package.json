@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Saucedechoux/Snowcraft/issues"
   },
-  "homepage": "https://github.com/Saucedechoux/Snowcraft#readme"
+  "homepage": "https://github.com/Saucedechoux/Snowcraft#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "sass": "^1.39.2",
+    "typescript": "^4.4.3"
+  }
 }
