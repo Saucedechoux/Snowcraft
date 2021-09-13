@@ -1,0 +1,22 @@
+{
+  "name": "snowcraft",
+  "version": "1.0.0",
+  "description": "Site web pour le serveur minecraft Snowcraft",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "sass --no-source-map --watch scss:css",
+    "build-ts": "tsc --build --watch tsconfig.json --preserveWatchOutput",
+    "build": "concurrently -n \"Typescript,SASS\" -p \"[{name}]\" -c \"blue,green\" \"yarn run build-ts\" \"yarn run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saucedechoux/Snowcraft.git"
+  },
+  "author": "Saucedechoux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saucedechoux/Snowcraft/issues"
+  },
+  "homepage": "https://github.com/Saucedechoux/Snowcraft#readme"
+}
