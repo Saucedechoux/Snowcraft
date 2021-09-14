@@ -1,0 +1,51 @@
+@use "reset";
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/Minecraft.ttf") format("truetype");
+}
+
+$text-color: #472d5f;
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 4em;
+    padding: 0 0.5em;
+
+    .links-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            background-image: url("../img/images/logo.png");
+            background-size: cover;
+            background-position: center;
+        }
+        a {
+            text-decoration: none;
+            font-family: "Urbanist", sans-serif;
+            margin-left: 0.7em;
+            color: $text-color;
+        }
+    }
+
+    .dis-pack-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            font-family: "Urbanist", sans-serif;
+            margin-right: 0.7em;
+            color: $text-color;
+        }
+    }
+}
