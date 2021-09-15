@@ -57,6 +57,10 @@ table {
   font-family: "Minecraft";
   src: url("../fonts/Minecraft.ttf") format("truetype");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -64,6 +68,11 @@ table {
   justify-content: space-between;
   height: 4em;
   padding: 0 0.5em;
+}
+.header a {
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif;
+  color: #12192c;
 }
 .header .links-container {
   display: flex;
@@ -80,10 +89,7 @@ table {
   background-position: center;
 }
 .header .links-container a {
-  text-decoration: none;
-  font-family: "Urbanist", sans-serif;
   margin-left: 0.7em;
-  color: #472d5f;
 }
 .header .dis-pack-container {
   display: flex;
@@ -92,8 +98,40 @@ table {
   justify-content: space-between;
 }
 .header .dis-pack-container a {
-  text-decoration: none;
-  font-family: "Urbanist", sans-serif;
   margin-right: 0.7em;
-  color: #472d5f;
+}
+
+.landing-image {
+  position: relative;
+}
+.landing-image img {
+  width: 100%;
+}
+.landing-image h3 {
+  font-family: "Minecraft", sans-serif;
+  font-size: 3.2rem;
+  width: 100%;
+  text-align: center;
+  color: #c6cfe4;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+.landing-image a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6cfe4;
+}
+.landing-image a img {
+  height: 40%;
 }

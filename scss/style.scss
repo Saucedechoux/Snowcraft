@@ -1,25 +1,50 @@
+// Import reset CSS
+
 @use "reset";
+
+// Import fontes
+
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 @font-face {
     font-family: "Minecraft";
     src: url("../fonts/Minecraft.ttf") format("truetype");
 }
 
-$text-color: #472d5f;
+// Variables
 
-.header {
+$text-color: #12192c;
+
+// Mixins
+
+@mixin navbar-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+// Global
+
+html {
+    scroll-behavior: smooth
+}
+
+
+// Header
+
+.header {
+    @include navbar-flex();
     height: 4em;
     padding: 0 0.5em;
 
+    a {
+        text-decoration: none;
+        font-family: "Urbanist", sans-serif;
+        color: $text-color;
+    }
+
     .links-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include navbar-flex();
         .logo {
             width: 3em;
             height: 3em;
@@ -29,23 +54,51 @@ $text-color: #472d5f;
             background-position: center;
         }
         a {
-            text-decoration: none;
-            font-family: "Urbanist", sans-serif;
             margin-left: 0.7em;
-            color: $text-color;
         }
     }
 
     .dis-pack-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include navbar-flex();
         a {
-            text-decoration: none;
-            font-family: "Urbanist", sans-serif;
             margin-right: 0.7em;
-            color: $text-color;
+        }
+    }
+}
+
+// Landing image
+
+.landing-image {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    h3 {
+        font-family: "Minecraft", sans-serif;
+        font-size: 3.2rem;
+        width: 100%;
+        text-align: center;
+        color: #c6cfe4;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: screen;
+    }
+    a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #c6cfe4;
+        img {
+            height: 40%;
         }
     }
 }
