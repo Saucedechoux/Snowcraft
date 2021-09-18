@@ -68,6 +68,7 @@ html {
   justify-content: space-between;
   height: 4em;
   padding: 0 0.5em;
+  background-color: transparent;
 }
 .header a {
   text-decoration: none;
@@ -108,11 +109,11 @@ html {
   width: 100%;
 }
 .landing-image h3 {
-  font-family: "Minecraft", sans-serif;
-  font-size: 3.2rem;
+  font-family: "Urbanist", sans-serif;
+  font-size: clamp(25px, 5vw, 60px);
   width: 100%;
   text-align: center;
-  color: #c6cfe4;
+  color: #f1f2f5;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -121,17 +122,91 @@ html {
 }
 .landing-image a {
   position: absolute;
-  bottom: 20px;
+  bottom: 5vmin;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50px;
-  width: 50px;
+  height: clamp(35px, 5vw, 50px);
+  width: clamp(35px, 5vw, 50px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c6cfe4;
+  background-color: #f1f2f5;
+  animation: arrowMove 1.5s infinite;
 }
 .landing-image a img {
   height: 40%;
+}
+
+.main-content {
+  padding: 3vw 5vw 5vw;
+}
+.main-content h1, .main-content span {
+  font-family: "Urbanist", sans-serif;
+  font-size: clamp(25px, 7vw, 70px);
+}
+.main-content span {
+  font-size: clamp(14px, 2vw, 20px);
+}
+.main-content .slideshow-container {
+  margin: 2vw 0;
+  overflow: hidden;
+  min-height: 60vmin;
+  cursor: grab;
+  position: relative;
+}
+.main-content .slideshow-container:active {
+  cursor: grabbing;
+}
+.main-content .slideshow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.main-content .slide {
+  flex-shrink: 0;
+  height: 100%;
+  width: 80vmin;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.main-content .slide:not(:nth-child(1)) {
+  margin-left: 10px;
+}
+.main-content .s1 {
+  background-image: url("../img/images/bg-1.png");
+}
+.main-content .s2 {
+  background-image: url("../img/images/bg-2.png");
+}
+.main-content .s3 {
+  background-image: url("../img/images/bg-3.png");
+}
+.main-content .s4 {
+  background-image: url("../img/images/bg-4.png");
+}
+.main-content .s5 {
+  background-image: url("../img/images/bg-5.png");
+}
+.main-content .s6 {
+  background-image: url("../img/images/bg-6.png");
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 550px) {
+  .header .dis-pack-container {
+    display: none;
+  }
 }
