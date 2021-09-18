@@ -61,19 +61,27 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 4em;
-  padding: 0 0.5em;
-  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: display 200ms;
 }
 .header a {
   text-decoration: none;
   font-family: "Urbanist", sans-serif;
-  color: #12192c;
+  color: #f1f2f5;
 }
 .header .links-container {
   display: flex;
@@ -88,9 +96,17 @@ html {
   background-image: url("../img/images/logo.png");
   background-size: cover;
   background-position: center;
+  margin-left: 0.5em;
 }
 .header .links-container a {
-  margin-left: 0.7em;
+  margin-left: 1em;
+  background-color: #f1f2f51a;
+  padding: 7px 15px;
+  border-radius: 15px;
+  transition: background-color 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.header .links-container a:hover, .header .links-container a:active {
+  background-color: #f1f2f531;
 }
 .header .dis-pack-container {
   display: flex;
@@ -99,7 +115,10 @@ html {
   justify-content: space-between;
 }
 .header .dis-pack-container a {
-  margin-right: 0.7em;
+  margin-right: 1em;
+}
+.header.scroll {
+  display: none;
 }
 
 .landing-image {
@@ -205,8 +224,24 @@ html {
     transform: translateY(0);
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .header .dis-pack-container {
     display: none;
+  }
+}
+@media screen and (max-width: 565px) {
+  .header {
+    position: static;
+    background-color: #f1f2f5;
+    overflow-x: scroll;
+  }
+  .header .links-container a {
+    margin-left: 0.5em;
+    padding: 7px 12px;
+    background-color: #12192d1a;
+    color: #12192d;
+  }
+  .header .links-container a:hover, .header .links-container a:active {
+    background-color: #12192d31;
   }
 }

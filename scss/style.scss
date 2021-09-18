@@ -12,7 +12,7 @@
 
 // Variables
 
-$text-color: #12192c;
+$text-color: #f1f2f5;
 
 // Mixins
 
@@ -29,14 +29,22 @@ html {
     scroll-behavior: smooth
 }
 
+body {
+    margin: 0;
+}
+
 
 // Header
 
 .header {
     @include navbar-flex();
     height: 4em;
-    padding: 0 0.5em;
-    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: display 200ms;
 
     a {
         text-decoration: none;
@@ -53,17 +61,28 @@ html {
             background-image: url("../img/images/logo.png");
             background-size: cover;
             background-position: center;
+            margin-left: 0.5em;
         }
         a {
-            margin-left: 0.7em;
+            margin-left: 1em;
+            background-color: #f1f2f51a;
+            padding: 7px 15px;
+            border-radius: 15px;
+            transition: background-color 200ms cubic-bezier(.18, .89, .32, 1.28);
+            &:hover, &:active {
+                background-color: #f1f2f531
+            }
         }
     }
 
     .dis-pack-container {
         @include navbar-flex();
         a {
-            margin-right: 0.7em;
+            margin-right: 1em;
         }
+    }
+    &.scroll {
+        display: none;
     }
 }
 
@@ -161,6 +180,8 @@ html {
     }
 }
 
+// Animations
+
 @keyframes arrowMove {
     0% {
         transform: translateY(0);
@@ -173,11 +194,32 @@ html {
     }
 }
 
-@media screen and (max-width: 550px) {
+// Medias
+
+@media screen and (max-width: 650px) {
     
     .header {
         .dis-pack-container {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .header {
+        position: static;
+        background-color: #f1f2f5;
+        overflow-x: scroll;
+        .links-container {
+            a {
+                margin-left: 0.5em;
+                padding: 7px 12px;
+                background-color: #12192d1a;
+                color: #12192d;
+                &:hover, &:active {
+                    background-color: #12192d31;
+                }
+            }
         }
     }
 }
