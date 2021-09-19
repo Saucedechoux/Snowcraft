@@ -301,8 +301,8 @@ header.fondu-out, .loader.fondu-out {
     background-color: #f1f2f5;
   }
   .header .links-container a {
-    margin-left: 0.5em;
-    padding: 7px 12px;
+    margin-left: 0.37em;
+    padding: 5px 10px;
     background-color: #12192d1a;
     color: #12192d;
   }
