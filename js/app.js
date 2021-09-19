@@ -61,7 +61,7 @@ discordButton.addEventListener("click", () => {
     location.assign("https://discord.gg/EHcbuCjDbr");
 });
 packButton.addEventListener("click", () => {
-    location.assign("../packs/Snowstorm.zip");
+    location.assign("./packs/Snowstorm.zip");
 });
 discordButton.addEventListener("touchend", () => {
     location.assign("https://discord.gg/EHcbuCjDbr");
