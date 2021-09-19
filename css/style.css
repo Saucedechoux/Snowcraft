@@ -97,7 +97,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
-  transition: display 200ms;
+  transition: opacity 200ms ease-out;
 }
 .header a {
   text-decoration: none;
@@ -230,6 +230,42 @@ body {
 .main-content .s6 {
   background-image: url("../img/images/bg-6.png");
 }
+.main-content .discord-container, .main-content .pack-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 0;
+}
+.main-content .discord-container img, .main-content .pack-container img {
+  height: 10vw;
+}
+.main-content .discord-container button, .main-content .pack-container button {
+  display: block;
+  background-color: #5c6bc0;
+  width: 80%;
+  padding: 1vw 0;
+  color: #f1f2f5;
+  font-family: "Urbanist", sans-serif;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  box-shadow: 0 6px #3f4981;
+}
+.main-content .discord-container button:active, .main-content .pack-container button:active {
+  top: 6px;
+  box-shadow: 0 0 #3f4981;
+}
+.main-content .pack-container button {
+  color: #302e29;
+  background-color: #fcbf29;
+  box-shadow: 0 6px #fe9923;
+}
+.main-content .pack-container button:active {
+  box-shadow: 0 0 #fe9923;
+}
 
 @keyframes arrowMove {
   0% {
@@ -252,7 +288,6 @@ body {
 }
 header.fondu-out, .loader.fondu-out {
   opacity: 0;
-  transition: opacity 200ms ease-out;
 }
 
 @media screen and (max-width: 650px) {
@@ -264,7 +299,6 @@ header.fondu-out, .loader.fondu-out {
   .header {
     position: static;
     background-color: #f1f2f5;
-    overflow-x: scroll;
   }
   .header .links-container a {
     margin-left: 0.5em;

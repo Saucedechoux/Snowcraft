@@ -67,7 +67,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 10;
-    transition: display 200ms;
+    transition: opacity 200ms ease-out;
 
     a {
         text-decoration: none;
@@ -198,6 +198,45 @@ body {
     .s6 {
         background-image: url("../img/images/bg-6.png");
     }
+    .discord-container, .pack-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw 0;
+        img {
+            height: 10vw;
+        }
+        button {
+            display: block;
+            background-color: #5c6bc0;
+            width: 80%;
+            padding: 1vw 0;
+            color: $text-color;
+            font-family: "Urbanist", sans-serif;
+            border: none;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            box-shadow: 0 6px #3f4981;
+            &:active {
+                top: 6px;
+                box-shadow: 0 0 #3f4981;
+            }
+        }
+    }
+    .pack-container {
+        button {
+            color: #302e29;
+            background-color: #fcbf29;
+            box-shadow: 0 6px #fe9923;
+            &:active {
+                box-shadow: 0 0 #fe9923;
+            }
+        }
+    }
+
 }
 
 // Animations
@@ -225,7 +264,6 @@ body {
 
 header.fondu-out, .loader.fondu-out {
     opacity: 0;
-    transition: opacity 200ms ease-out;
 }
 
 // Medias
@@ -243,7 +281,6 @@ header.fondu-out, .loader.fondu-out {
     .header {
         position: static;
         background-color: #f1f2f5;
-        overflow-x: scroll;
         .links-container {
             a {
                 margin-left: 0.5em;
