@@ -2,7 +2,7 @@
 
 ## Qu'est ce que Snowcraft ?
 
-### Snowcraft est un serveur minecraft sur le thème de la neige. Il dispose d'un serveur Discord ainsi que son propre pack de textures ! Des modos seront là pour vous garantir la meilleure exprérience de jeu !
+#### Snowcraft est un serveur minecraft sur le thème de la neige. Il dispose d'un serveur Discord ainsi que son propre pack de textures ! Des modos seront là pour vous garantir la meilleure exprérience de jeu !
 
 ## Liens utiles
 

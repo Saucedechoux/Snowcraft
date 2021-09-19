@@ -2,16 +2,22 @@
 const slider = document.querySelector(".slideshow-container");
 const title = document.querySelector(".title");
 const header = document.querySelector(".header");
+const loader = document.querySelector(".loader");
+const body = document.querySelector("body");
+window.addEventListener("load", () => {
+    loader.classList.add("fondu-out");
+    body.style.overflowY = "scroll";
+});
 let holding = false;
 let firstClickX;
 let alreadyLeftScrolled;
 window.addEventListener("scroll", () => {
     let rect = title === null || title === void 0 ? void 0 : title.getBoundingClientRect();
     if (rect.top <= 100 && window.innerWidth > 565) {
-        header.classList.add("scroll");
+        header.classList.add("fondu-out");
     }
     else {
-        header.classList.remove("scroll");
+        header.classList.remove("fondu-out");
     }
 });
 slider.addEventListener("mousedown", e => {

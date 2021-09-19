@@ -1,6 +1,13 @@
 const slider = document.querySelector(".slideshow-container") as HTMLDivElement;
 const title = document.querySelector(".title") as HTMLHeadingElement;
 const header = document.querySelector(".header") as HTMLDivElement;
+const loader = document.querySelector(".loader") as HTMLDivElement;
+const body = document.querySelector("body") as HTMLBodyElement; 
+
+window.addEventListener("load", () => {
+    loader.classList.add("fondu-out")
+    body.style.overflowY = "scroll"
+})
 
 let holding:boolean = false;
 let firstClickX:number;
@@ -9,9 +16,9 @@ let alreadyLeftScrolled:number;
 window.addEventListener("scroll", () => {
     let rect:DOMRect = title?.getBoundingClientRect();
     if (rect.top <= 100 && window.innerWidth > 565) {
-        header.classList.add("scroll")
+        header.classList.add("fondu-out")
     } else {
-        header.classList.remove("scroll")
+        header.classList.remove("fondu-out")
     }
     
 })

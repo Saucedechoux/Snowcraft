@@ -31,6 +31,29 @@ html {
 
 body {
     margin: 0;
+    overflow: hidden;
+}
+
+// Loader
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.icon {
+    border-bottom: solid 2px darkcyan;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    z-index: 30;
+    animation: loaderSpin 2s infinite linear;
 }
 
 
@@ -80,9 +103,6 @@ body {
         a {
             margin-right: 1em;
         }
-    }
-    &.scroll {
-        display: none;
     }
 }
 
@@ -192,6 +212,20 @@ body {
     100% {
         transform: translateY(0);
     }
+}
+
+@keyframes loaderSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header.fondu-out, .loader.fondu-out {
+    opacity: 0;
+    transition: opacity 200ms ease-out;
 }
 
 // Medias
